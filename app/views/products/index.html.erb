@@ -3,7 +3,7 @@
 <ul>
   <% @products.each do |product| %>
     <li>
-      Product Name: "<%= product.name %>" costs $<%= product.price %>  |
+      Product Name: "<%= link_to product.name, product %>" costs $<%= product.price %>  |
 	  Sold by <%= product.user.name if product.user.present? %>
     </li>
   <% end %>
